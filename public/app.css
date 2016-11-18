@@ -1,0 +1,99 @@
+/* app css stylesheet */
+
+.online{
+   margin: 13px 0 15px 0;
+   position: relative;
+   width: 100%;
+   text-align: right;
+   padding-right: 15px;
+   color: #27ae60;
+
+}
+
+.online::before{
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+   margin-right: 5px;
+  background-color: #27ae60;
+}
+
+.offline{
+   margin: 13px 0 15px 0;
+   position: relative;
+   width: 100%;
+   text-align: right;
+   padding-right: 15px;
+   color: #e74c3c;
+
+}
+
+.offline::before{
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+   margin-right: 5px;
+  background-color: #e74c3c;
+}
+
+md-card-content h1{
+   width: 100%;
+   text-align: center;
+}
+
+.ng-enter{
+   animation: slideInRight 0.5s both ease-in 0.5s;
+}
+
+.ng-leave{
+   animation: slideOutLeft 0.5s both ease-in;
+}
+
+
+/* slide out to the left */
+@keyframes slideOutLeft {
+   to      { transform: translateX(-100%); opacity: 0; }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+   from    { transform:translateX(100%);opacity: 0; }
+   to      { transform: translateX(0); opacity: 1; }
+}
+
+.gray {
+ background: #f5f5f5; }
+
+.green {
+ background: #b9f6ca; }
+
+.yellow {
+ background: #ffff8d; }
+
+.blue {
+ background: #84ffff; }
+
+.purple {
+ background: #b388ff; }
+
+.red {
+ background: #ff8a80; }
+
+md-grid-tile {
+ transition: all 400ms ease-out 50ms; }
+
+md-grid-list {
+ margin: 8px; }
+
+ #cortina{
+   transform-origin: 50% 0%;
+ }
+

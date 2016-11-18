@@ -1,0 +1,49 @@
+<md-content class="md-padding" layout-xs="column" layout="row">
+    
+    <div flex layout="column">
+           <md-card>
+               <md-card-header>
+                   <md-card-avatar>
+                       <md-icon class="md-avatar-icon" md-font-library="material-icons">&#xE338;</md-icon>
+                   </md-card-avatar>
+                   <md-card-header-text> Cortina<span class="md-title">Control</span></md-card-header-text>
+               </md-card-header>
+               <md-card-content>
+                 <div ng-show="true" layout="row" layout-sm="column" layout-align="space-around">
+     <md-progress-circular ng-show="sending" md-mode="indeterminate"></md-progress-circular>
+    </div>
+    <div flex layout="column" layout-align="center center">
+       <md-slider-container ng-disabled="readonly">
+         <md-input-container>
+           <input flex type="number" min="0" max="100" ng-model="master" aria-label="master" aria-controls="master-slider">
+         </md-input-container>
+         <md-slider flex ng-model="master" md-discrete aria-label="Master" md-vertical step="1"
+                    ng-readonly="readonly"></md-slider>
+         <h5>Posición</h5>
+       </md-slider-container>
+       <md-checkbox ng-model="readonly">Fijar</md-checkbox>
+     </div>
+           </md-card>
+           <md-card>
+               <md-card-header>
+                   <md-card-avatar>
+                      <md-icon class="md-avatar-icon" md-font-library="material-icons">&#xE8E4;</md-icon>
+                   </md-card-avatar>
+                   <md-card-header-text>Presets <span class="md-title">Control</span>  </md-card-header-text>
+               </md-card-header>
+               <md-card-content>
+                   <h1>{{posicion}}</h1>
+               </md-card-content>
+               <md-card-actions layout="row" layout-align="end center">
+                   <md-button class="md-icon-button" aria-label="Add" ng-click="showTabDialog($event)">
+                       <md-icon md-font-library="material-icons"><i class="material-icons">add_circle_outline</i></md-icon>
+                   </md-button>
+               </md-card-actions>
+           </md-card>
+       </div>
+        <div hide show-gt-sm flex layout="column">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272.18 233.22">
+            <defs><style>.cls-1,.cls-16,.cls-2{fill:#d3d3d3;}.cls-1,.cls-15,.cls-16,.cls-2,.cls-3{stroke:#000;}.cls-1{stroke-linecap:round;stroke-linejoin:round;}.cls-1,.cls-2{stroke-width:0.27px;}.cls-15,.cls-16,.cls-2{stroke-linecap:square;}.cls-13,.cls-14,.cls-15,.cls-3{fill:#fff;}.cls-13,.cls-3{stroke-width:0.25px;}.cls-4{fill:#61c5d5;}.cls-5{opacity:0.3;}.cls-6{fill:#ededed;}.cls-7{fill:#dfe0e0;}.cls-8{fill:#cbcecf;}.cls-9{fill:#afafaf;}.cls-10{fill:gray;}.cls-11{fill:#4d4d4d;}.cls-12{fill:#333;}.cls-13{stroke:#120800;}.cls-15{stroke-width:0.2px;}.cls-16{stroke-width:0.22px;}</style></defs><title>curtain</title><g id="fondo"><g id="widget"><path class="cls-1" d="M19.78,10H11.07a5.55,5.55,0,1,0,0,2.81h8.74a11.09,11.09,0,0,0,11,9.74V.25A11.24,11.24,0,0,0,19.78,10ZM4.18,11.46A1.51,1.51,0,1,1,5.69,13,1.52,1.52,0,0,1,4.18,11.46Z"/><path class="cls-1" d="M252.41,12.68h8.71a5.55,5.55,0,1,0,0-2.81h-8.74a11.09,11.09,0,0,0-11-9.74V22.45A11.24,11.24,0,0,0,252.41,12.68ZM268,11.24a1.51,1.51,0,1,1-1.51-1.51A1.52,1.52,0,0,1,268,11.24Z"/><path class="cls-2" d="M31,22.69V.37H241.22V22.69Z"/></g><rect class="cls-3" x="63.47" y="24.63" width="145.35" height="194.37"/><rect class="cls-4" x="71.07" y="34.79" width="130.15" height="174.04"/><g class="cls-5"><path class="cls-6" d="M97,116.82h6.19v37.69h3.22V95.82L97,96.8Z"/><path class="cls-6" d="M147.35,119.66h7v-43L179.82,92v10.11h7V76.59l-.74-.48c-.94-3.1-7.71,4.13-7.71,4.13-1-1.7-9.69-5.73-9.69-5.73l-.25-.31c-1.46-1.8-9.66-11.57-14-9.38-5,2.19-14.33,8.93-22.22,15h.7v30.48h14.46Z"/><path class="cls-7" d="M71.07,84.34h8.65l38-23.63c-1.71-1.55-2.92-2.79-3.14-2.88-16.43,10-31.2,3.08-31.2,3.08s-8,5-12.36,4.86Z"/><path class="cls-7" d="M106.46,95.82v-.75L97,95.75v1Z"/><path class="cls-8" d="M97,84.34V95.75l9.41-.68V79.81h3.47a10,10,0,0,1,8.77-6.35L119,59.94l-1.24.77-38,23.63Z"/><path class="cls-8" d="M120,73.47a10,10,0,0,1,8.51,6.34h3.69c7.88-6.06,17.18-12.79,22.22-15,4.38-2.19,12.58,7.58,14,9.38a128.81,128.81,0,0,0,16.81-8.69c1.35-2,9.72.48,16,2.65v-12c-4-2.24-7-3.87-7.24-4-16.43,10-31.2,3.08-31.2,3.08s-8.4,5.28-12.68,4.86c0,0-20.79-8.45-23-5.26l-7.47,4.64Z"/><path class="cls-7" d="M185.25,65.52a128.81,128.81,0,0,1-16.81,8.69l.25.31s8.72,4,9.69,5.73c0,0,6.77-7.23,7.71-4.13l.74.48V69.44h14.4V68.17C195,66,186.6,63.56,185.25,65.52Z"/><polygon class="cls-9" points="173.6 127.41 173.6 143.59 176.11 143.59 176.11 102.15 179.82 102.15 179.82 92.04 154.37 76.64 154.37 119.66 147.35 119.66 147.35 110.28 132.89 110.28 132.89 137.45 138.99 137.45 138.99 125.85 152.55 125.85 152.55 132.85 155.88 132.85 155.88 127.41 173.6 127.41"/><polygon class="cls-9" points="82.39 116.82 82.39 176.12 87.3 176.12 87.3 154.51 87.48 154.51 87.48 116.82 97.05 116.82 97.05 96.8 97.05 95.75 97.05 84.34 79.72 84.34 71.07 84.34 71.07 116.49 71.26 116.82 82.39 116.82"/><polygon class="cls-9" points="186.83 76.59 186.83 102.15 192.71 102.15 192.71 111.71 193.89 111.71 199.71 101.56 201.22 104.2 201.22 69.44 186.83 69.44 186.83 76.59"/><polygon class="cls-10" points="103.24 154.51 103.24 116.82 97.05 116.82 87.48 116.82 87.48 154.51 103.24 154.51"/><path class="cls-10" d="M118.69,73.46a10,10,0,0,0-8.77,6.35h-3.47v74.7H115v19H121V147.1h27.75v12.64h2.83v40.62h2.8v-16.7h1.51V132.85h-3.33v-7H139v11.6h-6.1V79.81h-4.39A10,10,0,0,0,120,73.47l-.33-13.93-.32-13.26L119,59.94Z"/><polygon class="cls-10" points="193.89 111.71 192.71 111.71 192.71 102.15 186.83 102.15 179.82 102.15 176.11 102.15 176.11 143.59 181.13 143.59 181.13 183.66 190.57 183.66 190.57 159.97 201.22 159.97 201.22 104.2 199.71 101.56 193.89 111.71"/><polygon class="cls-10" points="71.24 175.24 77.26 175.24 77.26 190.66 87.3 190.66 87.3 176.12 82.39 176.12 82.39 116.82 71.26 116.82 71.07 116.49 71.07 151.97 71.24 151.97 71.24 175.24"/><polygon class="cls-11" points="87.48 154.51 87.3 154.51 87.3 176.12 87.3 190.66 88.48 190.66 88.48 180.5 106.33 180.5 106.33 173.52 115.05 173.52 115.05 154.51 106.46 154.51 103.24 154.51 87.48 154.51"/><polygon class="cls-11" points="124.17 202.15 139.06 202.15 139.06 159.74 148.74 159.74 148.74 147.1 120.99 147.1 120.99 173.52 124.17 173.52 124.17 202.15"/><polygon class="cls-11" points="190.57 183.66 193.69 183.66 193.69 201.84 200.98 201.84 200.98 195.18 201.22 195.18 201.22 159.97 190.57 159.97 190.57 183.66"/><polygon class="cls-11" points="166.87 201.84 170.56 201.84 170.56 183.66 181.13 183.66 181.13 143.59 176.11 143.59 173.6 143.59 173.6 127.41 155.88 127.41 155.88 132.85 155.88 183.66 166.87 183.66 166.87 201.84"/><rect class="cls-11" x="71.07" y="151.97" width="0.17" height="23.27"/><rect class="cls-11" x="151.57" y="200.36" width="2.8" height="1.47"/><polygon class="cls-12" points="200.98 201.84 193.69 201.84 193.69 183.66 190.57 183.66 181.13 183.66 170.56 183.66 170.56 201.84 166.87 201.84 166.87 183.66 155.88 183.66 154.37 183.66 154.37 200.37 154.37 201.84 151.57 201.84 151.57 200.37 151.57 159.74 148.74 159.74 139.06 159.74 139.06 202.15 124.17 202.15 124.17 173.52 120.99 173.52 115.05 173.52 106.33 173.52 106.33 180.5 88.48 180.5 88.48 190.66 87.3 190.66 77.26 190.66 77.26 175.24 71.24 175.24 71.07 175.24 71.07 208.53 201.22 208.53 201.22 195.18 200.98 195.18 200.98 201.84"/></g><path class="cls-13" d="M219.45,224.21c0,3.74-4,6.76-8.9,6.76H59.78c-4.91,0-8.9-3-8.9-6.76h0c0-3.74,4-6.76,8.9-6.76H210.55c4.91,0,8.9,3,8.9,6.76Z"/><rect class="cls-14" x="134.37" y="30.79" width="2.95" height="185.84"/><rect class="cls-14" x="68.53" y="122.23" width="137.34" height="2.95"/></g><g id="cortina" ng-style="curtainStyle"><path class="cls-15" d="M256.69,137.1"/><path class="cls-15" d="M31.09,22.45H241.33V232.7H31.09Z"/><path class="cls-16" d="M31,233.11V212H241.22v21.07Z"/></g>
+            </svg>
+        </div>
+</md-content>

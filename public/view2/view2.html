@@ -1,0 +1,37 @@
+<div layout="row" layout-align="space-around">
+ <md-card flex="80">
+   <form ng-submit="enviarPID()" name="pidForm">
+     <md-card-header>
+         <md-card-avatar>
+             <md-icon class="md-avatar-icon" md-font-library="material-icons">&#xE8B8;</md-icon>
+         </md-card-avatar>
+         <md-card-header-text> Control<span class="md-title">Definir Ganancias</span></md-card-header-text>
+     </md-card-header>
+     <md-card-content>
+       <div ng-show="true" layout="row" layout-sm="column" layout-align="space-around">
+<md-progress-circular md-mode="indeterminate" ng-if="sending"></md-progress-circular>
+</div>
+
+             <md-input-container class="md-block" flex-gt-sm>
+             <label>Proporcional</label>
+             <input  ui-mask="999.999" max="540" min="0" ng-model="pGain" autofocus>
+             </md-input-container>
+             <md-input-container class="md-block" flex-gt-sm>
+             <label>Integral</label>
+             <input  ui-mask="999.999" max="540" min="0" ng-model="iGain">
+             </md-input-container>
+             <md-input-container class="md-block" flex-gt-sm>
+             <label>Derivativa</label>
+             <input  ui-mask="999.999" max="540" min="0" ng-model="dGain">
+             </md-input-container>
+
+     </md-card-content>
+     <md-card-actions layout="row" layout-align="center">
+         <md-button type="submit" class="md-icon-button md-warn" aria-label="Share"
+         ng-disabled="pidForm.$invalid">
+             <md-icon md-font-library="material-icons">send</md-icon>
+         </md-button>
+     </md-card-actions>
+     </form>
+ </md-card>
+</div>
